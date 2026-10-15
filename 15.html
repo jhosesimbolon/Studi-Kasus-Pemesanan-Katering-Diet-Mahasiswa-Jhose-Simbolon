@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriBox — Katering Diet Mahasiswa</title>
+  <link rel="stylesheet" href="15.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">N</span><span>NutriBox</span></div>
+    <p>Katering sehat untuk aktivitas kuliahmu</p>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">STUDI KASUS · MODUL 15</p>
+      <h1>Pemesanan Katering Diet Mahasiswa</h1>
+      <p>Pilih paket makanan sesuai kebutuhan kalori, lalu berlangganan untuk hari kuliah Senin sampai Jumat.</p>
+    </section>
+
+    <section class="menu-panel" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MENU MINGGUAN</p>
+          <h2 id="menu-title">Menu sehat minggu ini</h2>
+        </div>
+        <span class="halal-badge"><span aria-hidden="true">✓</span> Halal</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">Hari</th><th scope="col">Menu</th><th scope="col">Kalori</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Senin</td><td>Nasi merah, ayam panggang, dan sayur</td><td>450 kkal</td></tr>
+            <tr><td>Selasa</td><td>Salad tuna dan telur rebus</td><td>380 kkal</td></tr>
+            <tr><td>Rabu</td><td>Oatmeal dan buah segar</td><td>320 kkal</td></tr>
+            <tr><td>Kamis</td><td>Sup ikan dan kentang</td><td>410 kkal</td></tr>
+            <tr><td>Jumat</td><td>Gado-gado dengan saus kacang</td><td>400 kkal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Informasi kalori merupakan perkiraan per porsi.</p>
+    </section>
+
+    <section class="order-layout">
+      <form id="orderForm" class="order-panel" novalidate>
+        <p class="eyebrow">FORM PEMESANAN</p>
+        <h2>Rencanakan kateringmu</h2>
+
+        <label for="customerName">Nama mahasiswa</label>
+        <input id="customerName" name="customerName" type="text" placeholder="Masukkan nama" autocomplete="name" required>
+
+        <label for="package">Pilih paket kalori</label>
+        <select id="package" name="package" required>
+          <option value="lean" data-name="Paket Lean" data-calories="1500" data-price="35000">Paket Lean — 1.500 kkal/hari · Rp35.000/hari</option>
+          <option value="balanced" data-name="Paket Seimbang" data-calories="1800" data-price="40000">Paket Seimbang — 1.800 kkal/hari · Rp40.000/hari</option>
+          <option value="active" data-name="Paket Aktif" data-calories="2000" data-price="45000">Paket Aktif — 2.000 kkal/hari · Rp45.000/hari</option>
+        </select>
+
+        <label for="days">Jumlah hari berlangganan</label>
+        <input id="days" name="days" type="number" min="5" max="5" value="5" required>
+        <small>Ketentuan studi kasus: minimal 5 hari, Senin–Jumat.</small>
+
+        <button type="submit">Buat Pesanan</button>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="summary-panel">
+        <p class="eyebrow">RINGKASAN</p>
+        <h2>Estimasi pesanan</h2>
+        <div class="summary-row"><span>Paket</span><strong id="summaryPackage">Paket Lean</strong></div>
+        <div class="summary-row"><span>Kalori per hari</span><strong id="summaryCalories">1.500 kkal</strong></div>
+        <div class="summary-row"><span>Durasi</span><strong id="summaryDays">5 hari</strong></div>
+        <div class="total-row"><span>Estimasi total</span><strong id="summaryTotal">Rp175.000</strong></div>
+        <p class="note">Total akhir dihitung berdasarkan paket dan jumlah hari yang dipilih. Pesanan hanya dikonfirmasi setelah validasi berhasil.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer><p>NutriBox · Pilihan praktis untuk makan lebih terencana.</p></footer>
+  <script src="15.js"></script>
+</body>
+</html>
